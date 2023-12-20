@@ -1,16 +1,13 @@
 pipeline {
 	agent any 
 	stages {
-		stage("working with conditions") {
+		stage("working with loops") {
 			steps {
 				script {
-					a=10
-					b=20
-					if ( a > b) {
-						println "${a} is big"
-					}
-					else {
-						println "${b} is big"
+					a=1
+					while ( a <= 10 ){
+						println "a value is ${a}"
+						a = a + 1
 					}
 				}
 			}
