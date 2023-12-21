@@ -1,13 +1,12 @@
 pipeline {
 	agent any 
 	stages {
-		stage("working with file operations") {
+		stage("working with variables") {
 			steps {
 				script {
-					File file = new File("/tmp/file1.txt")
-					println file.readLines()
-					for(line in file.readLines()){
-						println line
+					var1=10
+					var2="Number is 10"
+					println " var 1 is ${var1} , and var2 value is ${var2}"
 					}
 				}
 			}
